@@ -1,0 +1,8 @@
+# Libraries
+node_modules
+package-lock.json
+build
+coverage
+
+# Tokens
+**/*.token.mjs
