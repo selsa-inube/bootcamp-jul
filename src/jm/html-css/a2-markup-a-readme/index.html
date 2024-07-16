@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A2</title>
+  </head>
+  <body>
+    <h1>React</h1>
+    <p>React is JavaScript library for building user interfaces.</p>
+    <p></p>
+
+    <ul>
+      <li>
+        <strong>Declarative: </strong>react makes it painless to create
+        interactive Ul. Desing simple views for each states in your aplication,
+        and React will efficiently update and render just the right components
+        when your data changes. Declaratives views make your code more
+        predicable, simpler to understand, and easier to debug.
+      </li>
+      <li>
+        <strong>Component-Based: </strong>Build encapsulated components that
+        manage their own state, then compose them to make complex Uls. Since
+        component logic is written in JavaScript instead of templates, you can
+        easily pass rich data through your app and keep the state out of the
+        DOM.
+      </li>
+      <li>
+        <strong>Learn Once, Write Anywhere: </strong>We don't make assumptions
+        about the rest of your technology stack, so you can delevop new feature
+        in react woithout rewriting exiting code. React can also render on the
+        server using Node and power mobile apps using React Native
+      </li>
+    </ul>
+
+    <p>Learn how to us React in you project</p>
+
+    <h2>intallation</h2>
+    <p>
+      React has been desingned for gradual adoption from the start, and
+      <strong>you can us as litlle or as much React as your need:</strong>
+    </p>
+
+    <ul>
+      <li>Use Online Playgrounds to get a taste for React.</li>
+      <li>Add React to a website as a script tag in one minnute.</li>
+      <li>
+        Create New React App if you're looking for a powerful JavaScript
+        toolchain.
+      </li>
+    </ul>
+
+    <p>
+      you can use React as a script tag from a CDN, or as a React package on
+      npm.
+    </p>
+
+    <h2>Documentation</h2>
+    <p>
+      You can find the React documentation on the website. <br />
+      check out the Getting Started page for a quick over view. <br />
+      The documentationis divided into several sections:
+    </p>
+
+    <ul>
+      <li>Tutorial</li>
+      <li>Main Concepts</li>
+      <li>Advanced Guides</li>
+      <li>API References</li>
+      <li>Where To Get Support</li>
+      <li>Contributing Guide</li>
+    </ul>
+
+    <p>you can improve it by sending pull request to this repository.</p>
+
+    <h2>Examples</h2>
+
+    <p>
+      We have several examples on the website. Here is the first one to get you
+      started:
+    </p>
+
+    <pre>
+        <code>
+            import { createRoot } from "react-dom/client";
+
+            function HelloMensage ({ name }) {
+                return <div>hello {name}</div>;
+            }
+
+            const root = createRoot(document.getElementById("container"));
+            root.render(<HelloMensage name="Taylor"/>);
+        </code>
+    </pre>
+
+    <p>this example will render "Hello Taylor" into a container on the page.</p>
+    <br />
+    <p>
+      you'll notice that we used an HTML-like sintax; we call its JSX. JSX is
+      not required to use React, but it makes code more readable, and writing it
+      feels like writing HTML. if you're using React as a script tag, read thix
+      section on integrating JSX; otherwise, the recommended JavaScript
+      toolchains handle it automatically.
+    </p>
+    <h2>Contributing</h2>
+    <p>
+      The main purpose of this repository is to continue evolving React core,
+      making if faster and easier to use. Development of React happens in the
+      open on GitHub, and we are grateful to the community for contributing
+      bugfixes and improvements. Read below to learn how you can take part in
+      improving React.
+    </p>
+
+    <h3>Code of Conduct</h3>
+    <p>
+      Facebook has adopted a code of Conduct that we expect project participants
+      to adhere. Please read the full next so that you can understand what
+      actions will and will not be tolerated.
+    </p>
+
+    <h3>Contributing Guide</h3>
+    <p>
+      Read our Contributing Guide to learn about out development process, we
+      have a list of good first issues that contain bugs that have a relatively
+      limited scope. This is a great place to get started
+    </p>
+
+    <h3>License</h3>
+    <p>React is MIT lisenced</p>
+  </body>
+</html>
