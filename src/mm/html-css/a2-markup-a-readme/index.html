@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REACT.</title>
+    <title>REACT</title>
   </head>
   <body>
-    <h1>React.</h1>
+    <h1>React</h1>
     <hr />
 
     <p>React is a JavaScript library for building user interfaces.</p>
@@ -140,20 +140,17 @@
       <a href="https://react.dev/">on the website.</a> Here is the first one to
       get you started:
     </p>
+    <pre>
+  <code>
+    import { createRoot } from "react-dom/client";
 
-    <p>import { createRoot } from "react-dom/client";</p>
-
-    <br />
-
-    <p>
       function HelloMessage({ name }) { return &lt;div&gt;Hello
       {name}&lt;/div&gt; ; }
-    </p>
-
-    <p>
+  
       const root = createRoot(document.getElementById("container"));
       root.render&lt;HelloMessage name="Taylor" /&gt;;
-    </p>
+      </code>
+    </pre>
 
     <p>This example will render "Hello Taylor" into a container on the page</p>
 
