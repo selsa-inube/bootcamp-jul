@@ -4,12 +4,14 @@ body {
   margin-top: auto;
   box-sizing: border-box;
 }
+
 h1 {
   margin-left: 150px;
   margin-right: 150px;
-  font-weight: bold !important;
+  font-weight: bold;
   color: black;
 }
+
 .category {
   margin-left: 150px;
   margin-right: 150px;
@@ -17,6 +19,7 @@ h1 {
   color: #6b6b6b;
   font-weight: bold;
 }
+
 .description-img {
   position: static;
   color: darkgrey;
@@ -26,11 +29,12 @@ h1 {
   margin-left: 100px;
   margin-right: 100px;
 }
+
 .img {
-  flex: 1; /* Ocupa un tercio del espacio disponible */
   width: 100%;
   height: auto;
 }
+
 .text {
   margin-left: 150px;
   margin-right: 150px;
@@ -41,6 +45,7 @@ h1 {
   font-family: "arial";
   color: #535353;
 }
+
 .text-2 {
   margin-left: 150px;
   margin-right: 150px;
