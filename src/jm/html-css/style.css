@@ -19,6 +19,7 @@ body {
   color: white;
   padding: 15px;
   overflow-y: auto;
+  float: left;
 }
 
 .profile {
@@ -74,7 +75,7 @@ body {
 .content {
   margin-top: 100px;
   flex: 1;
-  text-align: left;
+  float: left;
 }
 
 .content h1 {
