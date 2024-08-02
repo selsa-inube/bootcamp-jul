@@ -194,6 +194,11 @@ body {
   font-weight: bold;
 }
 
+.info .title:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
 #profile-sandra-content:target {
   display: block;
   opacity: 1;
