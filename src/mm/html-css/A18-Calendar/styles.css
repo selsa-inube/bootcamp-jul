@@ -1,0 +1,147 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.main-content {
+  margin: 2%;
+  border: solid #000000;
+}
+
+header {
+  background-color: #f7d3df;
+  padding: 10px;
+  border: solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+select {
+  background-color: #bbaffd;
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: solid #000000;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.create-meeting {
+  font-family: Verdana, Tahoma, sans-serif;
+  background-color: #bbaffd;
+  color: #000000;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7d3df;
+  padding: 10px;
+  border: solid #000000;
+}
+
+.calendar-nav button {
+  background-color: #fcc2d5;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.days {
+  background-color: #f7d3df;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  padding-left: 1%;
+  gap: 80px;
+}
+.day {
+  background-color: #f7d3df;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  gap: 0;
+  border: solid #000000;
+}
+
+.hours {
+  font-family: Verdana, Tahoma, sans-serif;
+  line-height: 135px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.hours div {
+  padding-left: 20px;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-cell {
+  background: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 120px;
+  line-height: 120px;
+}
+
+.card,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8 {
+  border-radius: 3px;
+  font-weight: bold;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  background-color: #bbaffd;
+}
+
+.card:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover {
+  background-color: rgb(159, 212, 181);
+  transform: translate(-30px, -30px);
+  border: solid #000000;
+}
+
+.user {
+  border-radius: 50%;
+  display: flex;
+  padding: 8px;
+  width: 45px;
+  height: 30px;
+}
+
+.card-content {
+  line-height: 12px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
