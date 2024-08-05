@@ -38,6 +38,15 @@ body {
   margin: 0;
 }
 
+.menu-button:hover + .profile-submenu,
+.profile-submenu:hover {
+  display: block;
+}
+
+.profile-submenu a:hover {
+  background-color: #555;
+}
+
 .menu-item {
   position: relative;
   margin: 10px 0;
@@ -140,6 +149,10 @@ body {
 .profile-sandra {
   position: relative;
   margin-top: 20px;
+}
+
+.profile-sandra:hover .info {
+  display: block;
 }
 
 .profile-header {
