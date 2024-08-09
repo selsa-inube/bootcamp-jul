@@ -1,0 +1,203 @@
+body {
+  font-family: "Helvetica Neue", Arial;
+  margin: 0;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.circle {
+  margin-left: 60px;
+  width: 50px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.nav {
+  margin-left: 10em;
+}
+
+.nav ul,
+a {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  margin-left: 20em;
+}
+
+.menu:hover {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.text h1 {
+  font-size: 7em;
+  margin-left: 1em;
+  font-weight: 200;
+}
+
+.buttons {
+  margin-left: 7em;
+}
+
+.buttons .uno {
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+}
+
+.buttons .dos {
+  background-color: #d3d3d3;
+  color: #000;
+  font-size: 15px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+}
+
+.services {
+  display: flex;
+  justify-content: end;
+  margin-right: 6em;
+}
+
+.services ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  padding: 50px 20px;
+  background-color: #1d212b;
+  color: #ffffff;
+}
+
+.founder-info {
+  display: flex;
+  gap: 10px;
+  margin-left: 90px;
+}
+
+.founder-info img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.founder-info .p1 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.founder-info .p2 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.imgs {
+  width: 30em;
+  margin-left: 90px;
+  margin-top: 40px;
+}
+
+.info2 h2 {
+  margin: 50px;
+  font-size: 4em;
+  font-weight: 100;
+}
+
+.info2 .p3 {
+  margin: 50px;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.info2 button {
+  margin-left: 50px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 20px;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .circle {
+    padding: none;
+    margin: none;
+  }
+  .nav ul {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    font-size: 20px;
+  }
+
+  .text h1 {
+    font-size: 55px;
+  }
+
+  .buttons {
+    font-size: 10px;
+    display: flex;
+  }
+
+  .buttons button {
+    width: 50%;
+    margin: 10px 20px;
+    align-items: center;
+  }
+
+  .services ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .info {
+    margin-bottom: 20px;
+  }
+
+  .imgs {
+    width: 20em;
+  }
+
+  .info2 h2 {
+    font-size: 55px;
+  }
+
+  .info2 .p3 {
+    font-size: 16px;
+  }
+
+  .info2 button {
+    display: block;
+    width: 100%;
+    margin: 10px;
+  }
+}
