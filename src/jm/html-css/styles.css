@@ -143,11 +143,11 @@ a {
 
 @media (max-width: 768px) {
   .circle {
-    padding: none;
+    padding: 0;
     margin: none;
   }
   .nav ul {
-    display: none;
+    display: 0;
   }
 
   .menu {
@@ -181,10 +181,15 @@ a {
 
   .info {
     margin-bottom: 20px;
+    order: 2;
   }
 
   .imgs {
     width: 20em;
+  }
+
+  .info2 {
+    order: 1;
   }
 
   .info2 h2 {
