@@ -51,7 +51,7 @@ select {
 .days button {
   border: none;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -88,6 +88,7 @@ select {
 }
 
 .calendar-cell {
+  display: flex;
   padding: 18px;
   border: 1px solid #f1f1f1;
   height: 120px;
