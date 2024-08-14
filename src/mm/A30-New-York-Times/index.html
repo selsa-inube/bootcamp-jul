@@ -19,20 +19,24 @@
   </head>
   <body>
     <div class="sidebar">
-      <button class="buttons-side"><i class="fa-solid fa-ellipsis"></i></button>
-      <button class="buttons-side">
+      <button class="buttons-side" aria-label="More options">
+        <i class="fa-solid fa-ellipsis"></i>
+      </button>
+      <button class="buttons-side" aria-label="View in list">
         <i class="fa-solid fa-grip-lines-vertical"></i>
       </button>
-      <button class="buttons-side"><i class="fa-solid fa-moon"></i></button>
+      <button class="buttons-side" aria-label="Activate dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
     <div class="content">
       <header>
         <div class="header-1">
           <div>
-            <button class="buttons-header">
+            <button class="buttons-header" aria-label="search">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <button class="buttons-header">
+            <button class="buttons-header" aria-label="notifications">
               <i class="fa-solid fa-bell"></i>
             </button>
           </div>
@@ -46,32 +50,36 @@
         <div class="options">
           <p><strong>Thursday</strong> <br />May 21, 2020</p>
           <nav>
-            <button>World</button>
-            <button>Politics</button>
-            <button>Business</button>
-            <button>Opinion</button>
-            <button>Tech</button>
-            <button>Science</button>
-            <button>Sports</button>
-            <button>Arts</button>
-            <button>Books</button>
-            <button>Style</button>
-            <button>Food</button>
-            <button>Travel</button>
-            <button>Magazine</button>
+            <ul class="nav-list">
+              <li><a href="#">World</a></li>
+              <li><a href="#">Politics</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Opinion</a></li>
+              <li><a href="#">Tech</a></li>
+              <li><a href="#">Science</a></li>
+              <li><a href="#">Sports</a></li>
+              <li><a href="#">Arts</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">Style</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Magazine</a></li>
+            </ul>
           </nav>
-          <button id="button-1">
+          <button id="button-1" aria-label="more news categories">
             <i class="fa-solid fa-ellipsis"></i>
           </button>
         </div>
         <div class="options-2">
           <p id="p-2"><strong>Business</strong></p>
           <nav>
-            <button>Tech</button>
-            <button>Econo</button>
-            <button>Media</button>
-            <button>Money</button>
-            <button>Dealbook</button>
+            <ul class="nav-list">
+              <li><a href="#">Tech</a></li>
+              <li><a href="#">Econo</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Money</a></li>
+              <li><a href="#">Dealbook</a></li>
+            </ul>
           </nav>
         </div>
       </header>
@@ -173,11 +181,13 @@
           <div class="options-2">
             <p><strong>market snapshot</strong> <br />6:07AM</p>
             <nav>
-              <button>Futures</button>
-              <button>America</button>
-              <button>Europe</button>
-              <button>Asia</button>
-              <button>Commodities</button>
+              <ul class="nav-list">
+                <li><a href="#">Future</a></li>
+                <li><a href="#">America</a></li>
+                <li><a href="#">Europe</a></li>
+                <li><a href="#">Asia</a></li>
+                <li><a href="#">Commodities</a></li>
+              </ul>
             </nav>
           </div>
         </div>
