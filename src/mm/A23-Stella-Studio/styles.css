@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #060606;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo-img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  font-style: italic;
+}
+
+ul li a {
+  text-decoration: none;
+  padding: 8px 15px;
+  color: #808080;
+}
+
+.menu-icon {
+  display: block;
+  cursor: pointer;
+}
+
+section {
+  background-color: #f8f8f8;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+span {
+  font-size: 5rem;
+  line-height: 1.3;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+#btn-primary,
+#btn-secondary {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+#btn-primary {
+  background-color: #333;
+  color: #fff;
+}
+
+#btn-secondary {
+  background-color: #d7d7d7;
+  color: #000;
+}
+#btn-three {
+  background-color: #d7d7d7;
+  color: #000;
+  margin-top: 100px;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.tags {
+  margin-top: 40px;
+  font-style: italic;
+}
+
+.tags ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.section-2 {
+  background-color: #152029;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  flex-direction: row;
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 180px;
+  margin-bottom: 30px;
+  z-index: 2;
+}
+
+#profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.container-two {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#escalera {
+  margin-right: 20px;
+}
+
+#escalera img {
+  width: 500px;
+}
+
+.text {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  width: 50%;
+}
+
+.text span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+p {
+  margin-bottom: 40px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: none;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  span {
+    font-size: 3rem;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .tags ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .section-2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .container-two {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  #escalera {
+    margin: 20px;
+  }
+
+  #escalera img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .text {
+    margin: 20px;
+    width: 100%;
+  }
+
+  .text span {
+    font-size: 3rem;
+  }
+
+  #btn-three {
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px 0;
+    font-size: 1.2rem;
+  }
+  #profile {
+    display: none;
+  }
+}
