@@ -1,106 +1,96 @@
 body {
   background-color: #ffffff;
   margin: 0;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 .main-content {
   margin: 2%;
-  border: solid #000000;
+  border: solid #e2e2e2;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 header {
-  background-color: #f7d3df;
-  padding: 10px;
-  border: solid #000000;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 15px;
-  font-family: Verdana, Tahoma, sans-serif;
+}
+
+select,
+.create-meeting {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 select {
-  background-color: #bbaffd;
   color: #000000;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: solid #000000;
-  font-family: Verdana, Tahoma, sans-serif;
-  font-weight: bold;
 }
 
 .create-meeting {
-  font-family: Verdana, Tahoma, sans-serif;
-  background-color: #bbaffd;
-  color: #000000;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-weight: bold;
+  background-color: #6349f5;
+  color: #ffffff;
 }
 
 .calendar-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: #f7d3df;
   padding: 10px;
-  border: solid #000000;
-}
-
-.calendar-nav button {
-  background-color: #fcc2d5;
-  border: none;
-  border-radius: 50%;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 8px;
+  border: solid #e2e2e2;
 }
 
 .days {
-  background-color: #f7d3df;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  display: flex;
-  padding-left: 1%;
-  gap: 80px;
+  grid-template-columns: repeat(9, 1fr);
+  padding: 2%;
 }
-.day {
-  background-color: #f7d3df;
-  padding: 10px;
-  text-align: center;
+
+.days button {
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.date {
+  margin-left: 40px;
+}
+
+.num {
+  font-size: 30px;
   font-weight: bold;
 }
 
 .content {
   display: flex;
-  gap: 0;
-  border: solid #000000;
+  border: solid #f0eeee;
 }
 
 .hours {
-  font-family: Verdana, Tahoma, sans-serif;
-  line-height: 135px;
+  line-height: 160px;
+  width: 160px;
   font-size: 15px;
   font-weight: bold;
 }
 
 .hours div {
-  padding-left: 20px;
+  padding-left: 50px;
 }
 
 .calendar-body {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  height: 100%;
+  width: 100%;
 }
 
 .calendar-cell {
-  background: #ffffff;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #ddd;
+  padding: 18px;
+  border: 1px solid #f1f1f1;
   height: 120px;
-  line-height: 120px;
 }
 
 .card,
@@ -110,13 +100,61 @@ select {
 .card5,
 .card6,
 .card7,
-.card8 {
+.card8,
+.card9 {
   border-radius: 3px;
   font-weight: bold;
-  width: 120px;
-  height: 120px;
-  align-items: center;
-  background-color: #bbaffd;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.card,
+.card2,
+.card8 {
+  background-color: #f1f0f3;
+}
+
+.card3 {
+  background-color: #d8e9fd;
+  color: rgb(34, 90, 173);
+}
+
+.card4 {
+  background-color: #b7d9ff;
+  color: rgb(54, 124, 228);
+}
+
+.card5 {
+  background-color: #f5dbc3;
+  color: rgb(245, 216, 138);
+}
+
+.card6 {
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.card6 button {
+  border: none;
+  font-size: 30px;
+  margin: 50px;
+  background-color: inherit;
+}
+
+.card7 {
+  background-color: #e2f3dd;
+  color: rgb(180, 245, 150);
+}
+
+.card8 {
+  background-color: #f8f5f5;
+  color: rgb(54, 124, 228);
+}
+
+.card9 {
+  background-color: #fddfdf;
+  color: rgb(248, 137, 137);
 }
 
 .card:hover,
@@ -124,19 +162,19 @@ select {
 .card3:hover,
 .card4:hover,
 .card5:hover,
-.card6:hover,
 .card7:hover,
-.card8:hover {
-  background-color: rgb(159, 212, 181);
+.card8:hover,
+.card9:hover {
+  background-color: rgb(234, 245, 238);
   transform: translate(-30px, -30px);
   border: solid #000000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .user {
   border-radius: 50%;
-  display: flex;
-  padding: 8px;
-  width: 45px;
+  margin: 8px 0 0 8px;
+  width: 30px;
   height: 30px;
 }
 
@@ -144,4 +182,8 @@ select {
   line-height: 12px;
   text-align: center;
   color: rgb(0, 0, 0);
+}
+
+p {
+  font-size: 14px;
 }
