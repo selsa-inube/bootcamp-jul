@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(29, 29, 45);
+  font-family: arial;
+  color: white;
+}
+
+.blue {
+  background-color: rgb(57, 205, 255);
+  border-radius: 30px;
+  padding: 2em;
+  margin: 10px;
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  line-height: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+img {
+  width: 200px;
+}
+
+h4 {
+  color: rgb(228, 228, 228);
+  font-size: 12px;
+  text-align: left;
+}
+
+.numbers {
+  display: flex;
+  align-items: end;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  padding: 30px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.climate {
+  width: 30px;
+}
+
+.clime {
+  display: flex;
+  gap: 2em;
+  align-items: start;
+  justify-items: start;
+}
