@@ -1,0 +1,130 @@
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.blue {
+  background-color: #4a7aff;
+  border-radius: 30px;
+  padding: 25px;
+  margin: 10px;
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  border: 1px solid white;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+span {
+  font-size: 25px;
+}
+
+i {
+  font-size: 25px;
+}
+
+.fa-ellipsis-vertical {
+  cursor: pointer;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  line-height: 0;
+}
+
+img {
+  width: 200px;
+}
+
+#p1 {
+  font-size: 30px;
+  color: rgb(245, 242, 242);
+  font-weight: bold;
+}
+
+#p2 {
+  font-size: 80px;
+  margin: 10px;
+}
+
+#p3 {
+  font-size: 30px;
+  color: rgb(223, 223, 223);
+}
+
+h4 {
+  color: rgb(223, 223, 223);
+}
+
+h5 {
+  font-size: 18px;
+  margin: 6;
+}
+
+.numbers {
+  display: flex;
+  align-items: end;
+  align-items: center;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+}
+hr {
+  margin: 15px 10px 30px 10px;
+}
+
+main {
+  padding: 40px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(121, 120, 120, 0.2);
+}
+h2 {
+  color: #bbb9b9;
+  font-size: 18px;
+  margin: 0;
+  text-transform: capitalize;
+  margin-right: 130px;
+}
+
+.climate {
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+}
+
+.condition {
+  color: #bbb9b9;
+  font-size: 16px;
+  margin-right: 130px;
+}
+
+.temperature {
+  color: #fff;
+  font-size: 18px;
+  margin: 30px;
+}
+.temperature-grey {
+  color: #bbb9b9;
+}
