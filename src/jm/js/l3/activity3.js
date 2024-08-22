@@ -2,10 +2,10 @@ function countBs(string) {
   return countChar(string, "B");
 }
 
-function countChar(string, j) {
+function countChar(string, char) {
   let counted = 0;
   for (let i = 0; i < string.length; i++) {
-    if (string[i] == j) {
+    if (string[i] == char) {
       counted += 1;
     }
   }
@@ -13,4 +13,4 @@ function countChar(string, j) {
 }
 
 console.log(countBs("BBC"));
-console.log(countChar("kakkerlak", "K"));
+console.log(countChar("kakkerlak", "k"));
