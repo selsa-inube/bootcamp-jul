@@ -1,7 +1,7 @@
 function arrayToList(array) {
   let list = null;
-  for (let i = 0; i < array.length; i++) {
-    list = prepend(array[array.length - 1 - i], list);
+  for (let i = array.length - 1; i >= 0; i--) {
+    list = prepend(array[i], list);
   }
   return list;
 }

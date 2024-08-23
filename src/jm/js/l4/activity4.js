@@ -3,24 +3,26 @@ function deepEqual(a, b) {
     return true;
   }
 
-  if (
-    typeof a === "object" &&
-    a !== null &&
-    typeof b === "object" &&
-    b !== null
-  ) {
-    let keysA = Object.keys(a);
-    let keysB = Object.keys(b);
-
+  if (Array.isArray(a) && Array.isArray(b)) {
     return (
-      keysA.length === keysB.length &&
-      keysA.every((key) => keysB.includes(key) && deepEqual(a[key], b[key]))
+      a.length === b.length &&
+      a.every((element, index) => deepEqual(element, b[index]))
     );
   }
 
-  return false;
+  let keysA = Object.keys(a),
+    keysB = Object.keys(b);
+
+  if (keysA.length != keysB.length) return false;
+
+  for (let key of keysA) {
+    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+  }
+
+  return true;
 }
 
-console.log(deepEqual("5", "5"));
-console.log(deepEqual({ a: 1, b: 2 }, { a: 1, b: 3 }));
-console.log(deepEqual({ a: 1, b: { c: 2 } }, { a: 1, b: { c: 3 } }));
+let obj = { here: { is: "an" }, object: 2 };
+console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, { here: 1, object: 2 }));
+console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
