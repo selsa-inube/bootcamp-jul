@@ -1,73 +1,74 @@
-pagina1
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A31-Weather</title>
-    <link rel="stylesheet" href="page1.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
-    <div class="content">
-      <div class="header">
-        <button id="button1">::</button>
-        <div><i class="fa-solid fa-location-dot"></i> <span>Minsk</span></div>
-        <i class="fa-solid fa-ellipsis-vertical"></i>
-      </div>
-      <button>Updating</button> <br />
-      <img src="img/img1.png" alt="nubes" />
+    <header>
+      <nav>
+        <a href="#" aria-label="other options" class="button-1">::</a>
+
+        <div><i class="fa-solid fa-location-dot"></i> <span>Minks</span></div>
+        <a href="#" aria-label="more-options"
+          ><i class="fa-solid fa-ellipsis-vertical"></i
+        ></a>
+      </nav>
+      <button id="Updating">Updating</button> <br />
+      <img src="img/img1.png" alt="nubes" class="imagen1" />
       <h1>21°</h1>
-      <p id="p1">Thunderstorm</p>
-      <p class="p2">Monday, 17 may</p>
+      <p id="clima">Thunderstorm</p>
+      <p class="day">Monday, 17 may</p>
       <hr />
       <div class="data">
         <div class="Wind">
           <i class="fa-solid fa-wind"></i>
-          <p class="p3">13km/h</p>
-          <p class="p2">Wind</p>
+          <p class="percentage">13km/h</p>
+          <p class="climatology-hours">Wind</p>
         </div>
         <div class="Humidity">
           <i class="fa-solid fa-droplet"></i>
-          <p class="p3">24%</p>
-          <p class="p2">Humidity</p>
+          <p class="percentage">24%</p>
+          <p class="climatology-hours">Humidity</p>
         </div>
         <div class="rain">
           <i class="fa-solid fa-cloud-showers-heavy"></i>
-          <p class="p3">87%</p>
-          <p class="p2">Chance of rain</p>
+          <p class="percentage">87%</p>
+          <p class="climatology-hours">Chance of rain</p>
         </div>
       </div>
-    </div>
+    </header>
     <main>
       <div class="days">
         <h2>Today</h2>
-        <a href="page2.html">7 days > </a>
+        <a href="page2.html" id="days-2">7 days > </a>
       </div>
       <div class="time">
         <div class="weather">
           <p class="grades">23°</p>
           <img src="img/rainy-day.png" alt="firstimage" class="weather-img" />
-          <p class="p2">10:00</p>
+          <p class="climatology-hours">10:00</p>
         </div>
         <div class="weather">
           <p class="grades">22°</p>
           <img src="img/flash (1).png" alt="secondimage" class="weather-img" />
-          <p class="p2">11:00</p>
+          <p class="climatology-hours">11:00</p>
         </div>
         <div class="weather">
           <p class="grades">21°</p>
           <img src="img/rainy-day.png" alt="thirdimage" class="weather-img" />
-          <p class="p2">12:00</p>
+          <p class="climatology-hours">12:00</p>
         </div>
         <div class="weather">
           <p class="grades">19°</p>
           <img src="img/wind.png" alt="fourthimage" class="weather-img" />
-          <p class="p2">01:00</p>
+          <p class="climatology-hours">01:00</p>
         </div>
       </div>
     </main>
