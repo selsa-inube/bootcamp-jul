@@ -2,6 +2,10 @@ function deepEqual(a, b) {
   if (a === b) return true;
 
   if (typeof a == "object" && a != null && typeof b == "object" && b != null) {
+    if (Array.isArray(a) && Array.isArray(b)) {
+      if (a.length !== b.length) return false;
+      return a.every((element, index) => deepEqual(element, b[index]));
+    }
     let keyA = Object.keys(a);
     let keyB = Object.keys(b);
 
