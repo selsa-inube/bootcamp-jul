@@ -1,0 +1,301 @@
+body {
+  background-color: #efeeee;
+}
+
+.sidebar {
+  width: 30px;
+  line-height: 13em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-right: 25px;
+  background-color: #ffffff;
+}
+
+.button-sidebar {
+  background-color: #ffffff;
+  border: none;
+  font-size: 20px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 10px 5px 60px;
+}
+
+.head .left {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  color: black;
+  font-size: 15px;
+  border: none;
+  text-decoration: none;
+}
+
+.head .right {
+  display: flex;
+  gap: 25px;
+}
+
+h1 {
+  font-family: "Pirata One", system-ui;
+}
+
+.button1 {
+  background-color: transparent;
+  text-decoration: none;
+  margin: 4px;
+  border: none;
+  color: #000000;
+}
+
+.button2 {
+  background-color: transparent;
+  text-decoration: none;
+  padding: 5px;
+  border: 1px solid black;
+  color: #000;
+}
+
+.options {
+  display: flex;
+  margin-left: 5em;
+  gap: 20px;
+  margin-top: 1px;
+}
+
+.options .date {
+  font-size: 10px;
+  line-height: 3px;
+}
+
+.p1 {
+  font-size: 12px;
+}
+
+.p2 {
+  font-size: 10px;
+  font-family: arial;
+}
+
+.list {
+  display: flex;
+  gap: 4px;
+  font-size: 10px;
+  font-family: arial;
+}
+
+.options a {
+  font-size: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.options button {
+  background-color: #000;
+  color: #ffffff;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.options2 {
+  margin-left: 5em;
+  display: flex;
+}
+
+.text1 {
+  font-size: 18px;
+}
+
+.list2 {
+  display: flex;
+  margin-top: 23px;
+  gap: 3em;
+  list-style: none;
+  font-family: arial;
+  font-size: 10px;
+}
+
+.options2 a {
+  text-decoration: none;
+  color: #000;
+}
+
+section {
+  display: flex;
+}
+
+.one {
+  margin-left: 80px;
+}
+
+.person {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.button3 {
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  width: 70px;
+  height: 30px;
+  margin-top: 1%;
+}
+
+.p3 {
+  margin: 20px;
+  font-size: 10px;
+}
+
+.title2 {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.p4 {
+  color: #636363;
+  font-size: 15px;
+}
+
+.button4 {
+  color: #636363;
+}
+
+.two {
+  margin-left: 20px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.info2 {
+  display: flex;
+  align-items: center;
+}
+
+.p5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info3 {
+  display: flex;
+  margin-top: 10px;
+}
+
+.icons {
+  margin-top: 30px;
+}
+
+#icon2 {
+  color: #000000;
+  font-size: 8px;
+  text-decoration: none;
+}
+
+.three {
+  margin-left: 20px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+.p6 {
+  font-size: 14px;
+  color: #636363;
+}
+
+.three img {
+  width: 120px;
+  height: 120px;
+  margin-top: 20px;
+}
+
+.notice {
+  display: flex;
+}
+
+.footer {
+  margin-left: 5em;
+  display: flex;
+}
+
+.info4 {
+  font-family: arial;
+}
+
+.time {
+  font-family: arial;
+}
+
+.list3 {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  margin-top: 2em;
+  list-style: none;
+}
+
+.list3 a {
+  text-decoration: none;
+  color: #747474;
+}
+
+.cards {
+  display: flex;
+  margin-left: 5em;
+  gap: 20px;
+}
+
+.card1 {
+  background-color: rgba(168, 39, 39, 0.769);
+  color: #ffffff;
+  width: 11em;
+  height: 6em;
+}
+
+.card2 {
+  background-color: rgba(41, 92, 31, 0.79);
+  color: #ffffff;
+  width: 11em;
+  height: 6em;
+}
+
+.card3 {
+  background-color: #000000;
+  color: #ffffff;
+  width: 11em;
+  height: 6em;
+}
+
+.name {
+  font-size: 15px;
+  margin: 10px;
+}
+
+.number {
+  color: white;
+  font-size: 13px;
+  margin: 10px;
+}
+
+.fa-clock {
+  font-size: 10px;
+  margin: 10px;
+}
