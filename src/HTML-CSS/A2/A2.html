@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Documentation</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="#" style="color: blue; text-decoration: none">React.</a></h1>
+      <hr />
+      <p>React is a JavaScript library for building user interfaces.</p>
+    </header>
+
+    <section>
+      <ul>
+        <li>
+          <strong>Declarative:</strong> React makes it painless to create
+          interactive UIs. Design simple views for each state in your
+          application, and <br />
+          React will efficiently update and render just the right components
+          when your data changes. Declarative views make your <br />code more
+          predictable, simpler to understand, and easier to debug.
+        </li>
+        <li>
+          <strong>Component-Based:</strong> Build encapsulated components that
+          manage their own state, then compose them to make complex <br />
+          UIs. Since component logic is written in JavaScript instead of
+          templates, you can easily pass rich data through your app <br />
+          and keep the state out of the DOM.
+        </li>
+        <li>
+          <strong>Learn Once, Write Anywhere:</strong> We don't make assumptions
+          about the rest of your technology stack, so you can develop <br />
+          new features in React without rewriting existing code. React can also
+          render on the server using Node and power mobile <br />
+          apps using
+          <a href="#" style="color: blue; text-decoration: none"
+            >React Native.</a
+          >
+        </li>
+      </ul>
+      <p>
+        <a href="#" style="color: blue; text-decoration: none"
+          >Learn how to use React in your project.</a
+        >
+      </p>
+    </section>
+
+    <article>
+      <h2>Installation</h2>
+      <hr />
+      <p>
+        React has been designed for gradual adoption from the start, and
+        <strong>you can use as little or as much React as you need.</strong>
+      </p>
+      <ul>
+        <li>
+          Use
+          <a href="#" style="color: blue; text-decoration: none"
+            >to get a taste of React.</a
+          >to get a taste of React.
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >Add React to a website</a
+          >
+          as a <code>&lt;script&gt;</code> tag in one minute.
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >Create a new React app</a
+          >
+          if you're looking for a powerful JavaScript toolchain.
+        </li>
+      </ul>
+      <p>
+        You can use React as a <code>&lt;script&gt;</code> tag from a
+        <a href="#" style="color: blue; text-decoration: none">CDN</a>, or as a
+        react package on
+        <a href="#" style="color: blue; text-decoration: none">npm.</a>
+      </p>
+    </article>
+
+    <article>
+      <h2>Documentation</h2>
+      <hr />
+      <p>
+        You can find the React documentation
+        <a href="#" style="color: blue; text-decoration: none"
+          >on the website.</a
+        >
+      </p>
+      <p>
+        Check out the
+        <a href="#" style="color: blue; text-decoration: none"
+          >Getting Started</a
+        >
+        page for a quick overview.
+      </p>
+      <p>The documentation is divided into several sections:</p>
+      <ul>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none">Tutorial</a>
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >Main Concepts</a
+          >
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >Advanced Guides</a
+          >
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >API Reference</a
+          >
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >Where to Get Support</a
+          >
+        </li>
+        <li>
+          <a href="#" style="color: blue; text-decoration: none"
+            >Contributing Guide</a
+          >
+        </li>
+      </ul>
+      <p>
+        You can improve it by sending pull requests to
+        <a href="#" style="color: blue; text-decoration: none"
+          >this repository.</a
+        >
+      </p>
+    </article>
+
+    <section>
+      <h2>Examples</h2>
+      <hr />
+      <p>
+        We have several examples
+        <a href="#" style="color: blue; text-decoration: none">on the website</a
+        >. Here is the first one to get you started:
+      </p>
+      <pre><code>import { createRoot } from "react-dom/client";
+
+function HelloMessage({ name }) {
+  return &lt;div&gt;Hello {name}&lt;/div&gt;;
+}
+
+const root = createRoot(document.getElementById("container"));
+root.render(&lt;HelloMessage name="Taylor" /&gt;);</code></pre>
+      <p>
+        This example will render "Hello Taylor" into a container on the page.
+      </p>
+    </section>
+
+    <footer>
+      <p>
+        You'll notice that we used an HTML-like syntax;
+        <a href="#" style="color: blue; text-decoration: none">we call it JSX</a
+        >. JSX is not required to use React, but it makes code more readable,
+        <br />
+        and writing it feels like writing HTML. If you're using React as a
+        <code>&lt;script&gt;</code> tag, read
+        <a href="#" style="color: blue; text-decoration: none">this section</a>
+        on integrating JSX; otherwise, <br />
+        the
+        <a href="#" style="color: blue; text-decoration: none"
+          >recommended JavaScript toolchains</a
+        >
+        handle it automatically.
+      </p>
+      <h2>Contributing</h2>
+      <hr />
+      <p>
+        The main purpose of this repository is to continue evolving React core,
+        making it faster and easier to use. Development of React <br />happens
+        in the open on GitHub, and we are grateful to the community for
+        contributing bugfixes and improvements. Read below <br />
+        to learn how you can take part in improving React.
+      </p>
+      <h2>
+        <a href="#" style="color: blue; text-decoration: none"
+          >Code of Conduct</a
+        >
+      </h2>
+      <p>
+        Facebook has adopted a Code of Conduct that we expect project
+        participants to adhere to. Please read
+        <a href="#" style="color: blue; text-decoration: none">the full text</a>
+        so that you <br />can understand what actions will and will not be
+        tolerated.
+      </p>
+      <h2>
+        <a href="#" style="color: blue; text-decoration: none"
+          >Contributing Guide</a
+        >
+      </h2>
+      <p>
+        Read our
+        <a href="#" style="color: blue; text-decoration: none"
+          >contributing guide</a
+        >
+        to learn about our development process, how to propose bugfixes and
+        improvements, and how to <br />
+        build and test your changes to React.
+      </p>
+      <h2>Good First Issues</h2>
+      <p>
+        To help you get your feet wet and get you familiar with our contribution
+        process, we have a list of
+        <a href="#" style="color: blue; text-decoration: none"
+          >good first issues</a
+        >
+        that contain <br />
+        bugs that have a relatively limited scope. This is a great place to get
+        started.
+      </p>
+      <h2>License</h2>
+      <p>
+        React is
+        <a href="#" style="color: blue; text-decoration: none">MIT licensed.</a>
+      </p>
+    </footer>
+  </body>
+</html>
