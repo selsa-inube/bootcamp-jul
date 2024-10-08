@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(29, 29, 29);
+}
+body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+main {
+  width: 100%;
+  height: fit-content;
+}
+.opacity-1 {
+  opacity: 0.8;
+}
+.c-gray {
+  color: gray;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.fw-2 {
+  font-weight: 600;
+}
+.fz-2 {
+  font-size: 15px;
+}
+.fz-3 {
+  font-size: 21px;
+}
+.fz-1 {
+  font-size: 12px;
+}
+.c-black {
+  color: rgb(34, 34, 34);
+}
+.c-gray-2 {
+  color: rgb(46, 46, 46);
+}
+.pl-1 {
+  padding-left: 1rem;
+}
+.tittle {
+  font-size: 36px;
+  margin: 7px 0 20px 0;
+}
+.facebook {
+  background-image: "img/facebook";
+}
+nav {
+  width: 100%;
+  height: 4vh;
+  margin: 15px 0 20px 0;
+}
+nav ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  list-style: none;
+  height: 40px;
+}
+nav ul li {
+  height: 100%;
+  width: 35px;
+}
+i {
+  font-size: 18px;
+}
+
+p {
+  color: rgb(46, 46, 46);
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  margin-bottom: 20px;
+}
+.video-image {
+  height: 400px;
+  width: 100%;
+}
+strong {
+  font-size: 14px;
+  color: #000;
+}
+section {
+  border-bottom: 1px solid gray;
+}
