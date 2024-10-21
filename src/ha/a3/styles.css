@@ -1,64 +1,24 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 h1,
 h2,
-h3,
 h4 {
   color: rgb(29, 29, 29);
 }
 body {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1.6fr 1fr;
 }
 main {
   width: 100%;
   height: fit-content;
-}
-.opacity-1 {
-  opacity: 0.8;
-}
-.c-gray {
-  color: gray;
-}
-.mt-5 {
-  margin-top: 5rem;
-}
-.mt-2 {
-  margin-top: 2rem;
-}
-.mb-1 {
-  margin-bottom: 1rem;
-}
-.fw-2 {
-  font-weight: 600;
-}
-.fz-2 {
-  font-size: 15px;
-}
-.fz-3 {
-  font-size: 21px;
-}
-.fz-1 {
-  font-size: 12px;
-}
-.c-black {
-  color: rgb(34, 34, 34);
-}
-.c-gray-2 {
-  color: rgb(46, 46, 46);
-}
-.pl-1 {
-  padding-left: 1rem;
-}
-.tittle {
-  font-size: 36px;
-  margin: 7px 0 20px 0;
-}
-.facebook {
-  background-image: "img/facebook";
+  grid-column: 2 / 3;
+  padding: 3rem;
 }
 nav {
   width: 100%;
@@ -78,22 +38,89 @@ nav ul li {
 }
 i {
   font-size: 18px;
+  color: gray;
 }
 
 p {
   color: rgb(46, 46, 46);
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
   margin-bottom: 20px;
+  line-height: 2rem;
+  font-size: 1.2rem;
 }
-.video-image {
-  height: 400px;
-  width: 100%;
-}
+
 strong {
   font-size: 14px;
   color: #000;
 }
 section {
   border-bottom: 1px solid gray;
+}
+
+figure {
+  margin-bottom: 14rem;
+  overflow: visible;
+  margin-left: -5rem;
+  position: relative;
+  width: 130%;
+  height: 400px;
+}
+figure img {
+  width: 100%;
+}
+figcaption {
+  font-size: small;
+  color: gray;
+  width: 80%;
+  padding-left: 5rem;
+}
+main > :first-child {
+  margin-top: 3rem;
+}
+.header-text {
+  color: gray;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.title-info {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.title {
+  font-size: 2.8rem;
+  margin: 7px 0 20px 0;
+}
+.sub-title {
+  margin-bottom: 1.6rem;
+  font-size: 1.2rem;
+}
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.content-list li:last-child {
+  margin-bottom: 2.5rem;
+}
+.second-topic {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+section p {
+  font-size: 0.7rem;
+  line-height: normal;
+  color: gray;
+  font-weight: lighter;
+}
+textarea {
+  margin-bottom: 2rem;
+}
+footer {
+  margin-top: 3.5rem;
+}
+footer p {
+  margin-bottom: 0;
+}
+.about-apple {
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
 }
