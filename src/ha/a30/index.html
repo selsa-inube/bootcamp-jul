@@ -32,7 +32,7 @@
         <ul>
           <li class="topics-date">
             <strong>Monday</strong>
-            <p>May 21,2020</p>
+            <time datetime="2020-03-21">May 21,2020</time>
           </li>
           <li><a href="">Word</a></li>
           <li><a href="">Politics</a></li>
@@ -62,69 +62,86 @@
           <li><a href="">DealBook</a></li>
         </ul>
       </section>
-      <article class="first-article">
-        <img src="./img/first-article.jpg" alt="" />
-        <ul>
-          <li class="first-article-tech">TECH FOC</li>
-          <li>May 20,2020</li>
-        </ul>
-        <h3>Everything You Need to Know About Slow Internet Speeds</h3>
-        <p>
-          Our crummy connections are the biggest tech headache in the pandemic.
-        </p>
-        <p>Here's a comprehensive guide to what to do about them.</p>
-        <a href="" class="continue-reading">Continue Reading</a>
-      </article>
-      <article class="second-article">
+      <div class="main-new">
+        <article>
+          <img src="./img/first-article.jpg" alt="" />
+          <span class="topic-time-container">
+            <p class="">TECH FOC</p>
+            <time datetime="2020-03-20"> May 20,2020</time>
+          </span>
+          <h3>Everything You Need to Know About Slow Internet Speeds</h3>
+          <p>
+            Our crummy connections are the biggest tech headache in the
+            pandemic.
+          </p>
+          <p>Here's a comprehensive guide to what to do about them.</p>
+          <a href="" class="more-info">Continue Reading</a>
+        </article>
+      </div>
+      <div class="lates-news">
         <strong>Latest News</strong>
+        <span class="topic-time-container">
+          <p>THE UPSHOT</p>
+          <time datetime="2020-03-19">May 19,2020</time>
+        </span>
+        <article>
+          <h3>
+            A Wave of Small Business Closures Is on the Way.Can Washington Stom
+            It?
+          </h3>
+          <a href="" class="more-info">Continue Reading</a>
+        </article>
+        <span class="topic-time-container">
+          <p>NEWS ANALYSIS</p>
+          <time datetime="2020-03-19">May 19,2020</time>
+        </span>
+        <article>
+          <h3>
+            Coronavirus Shut Down the 'Experience Economy.' Can It Come Back
+          </h3>
+          <a href="" class="more-info">Continue Reading</a>
+        </article>
         <ul>
-          <li>THE UPSHOT</li>
-          <li>May 19,2020</li>
+          <li><i class="fa-regular fa-circle-dot"></i></li>
+          <li><i class="fa-regular fa-circle"></i></li>
+          <li><i class="fa-regular fa-circle"></i></li>
         </ul>
-        <h3>
-          A Wave of Small Business Closures Is on the Way.Can Washington Stom
-          It?
-        </h3>
-        <a href="" class="continue-reading">Continue Reading</a>
-        <ul class="second-article-new">
-          <li>NEWS ANALYSIS</li>
-          <li>May 19,2020</li>
-        </ul>
-        <h3>
-          Coronavirus Shut Down the 'Experience Economy.' Can It Come Back
-        </h3>
-        <a href="" class="continue-reading">Continue Reading</a>
-        <i class="fa-solid fa-ellipsis"></i>
-      </article>
-      <article class="third-article">
+      </div>
+      <div class="fast-forward">
         <strong>Fast Forward</strong>
         <ul>
           <li>
-            <h4>
-              Another Grim Tally of U.S. Unemployment Is Expected; Live Business
-              Updates
-            </h4>
-            <p>Live Stock Market News During the Coronavirus Pandemic</p>
-            <img src="./img/third-article-image1.jpeg" alt="" />
+            <article>
+              <h4>
+                Another Grim Tally of U.S. Unemployment Is Expected; Live
+                Business Updates
+              </h4>
+              <p>Live Stock Market News During the Coronavirus Pandemic</p>
+              <img src="./img/third-article-image1.jpeg" alt="" />
+            </article>
           </li>
           <li>
-            <h4>
-              How the 'Pandemic' Movie and Its Falsehoods Spread Widely Online
-            </h4>
-            <p>Conspirancy theories about the pandemic have gained more...</p>
-            <img src="./img/third-article-img2.avif" alt="" />
+            <article>
+              <h4>
+                How the 'Pandemic' Movie and Its Falsehoods Spread Widely Online
+              </h4>
+              <p>Conspirancy theories about the pandemic have gained more...</p>
+              <img src="./img/third-article-img2.avif" alt="" />
+            </article>
           </li>
           <li>
-            <h4>
-              Joe Rogan Strikes an Exclusive, Multiyear Deal With Spotify
-              Premium
-            </h4>
-            <p>The deal with Joe Rogan,a provocate podcast host with...</p>
-            <img src="./img/third-article-img3.webp" alt="" />
+            <article>
+              <h4>
+                Joe Rogan Strikes an Exclusive, Multiyear Deal With Spotify
+                Premium
+              </h4>
+              <p>The deal with Joe Rogan,a provocate podcast host with...</p>
+              <img src="./img/third-article-img3.webp" alt="" />
+            </article>
           </li>
-          <li class="third-article-show-all"><a href="">Show All</a></li>
+          <li><a href="" class="more-info">Show All</a></li>
         </ul>
-      </article>
+      </div>
     </main>
     <footer>
       <div class="footer-topics">
@@ -144,14 +161,6 @@
           <i class="fa-solid fa-angle-right"></i>
         </span>
       </div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
     </footer>
   </body>
 </html>
