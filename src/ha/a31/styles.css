@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+strong,
+p,
+time,
+a {
+  color: white;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+i {
+  color: rgb(230, 240, 255);
+}
+.app-container {
+  width: 75vw;
+  height: 75vh;
+  background: linear-gradient(to right, #87ceeb, #2b4eec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  width: 17rem;
+  height: 38rem;
+  background-color: rgb(10, 24, 54);
+  border-radius: 20px;
+  position: relative;
+  padding: 0.2rem;
+}
+main {
+  width: 100%;
+  background: linear-gradient(to top, #126ef3, #16c1f7);
+  height: 80%;
+  border-radius: 20px;
+  position: relative;
+  z-index: 3;
+}
+.phone:after {
+  position: absolute;
+  content: "";
+  background-color: #063c85;
+  top: 75%;
+  left: 4px;
+  right: 4px;
+  height: 23px;
+  z-index: 2;
+  border-radius: 0 0 45px 45px;
+}
+header {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+}
+header ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul .header-more {
+  height: 1.3rem;
+  width: 1.3rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.384);
+  border-radius: 50%;
+  font-size: 0.6rem;
+}
+header ul li strong {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 0.2rem;
+}
+header ul li .fa-location-dot {
+  font-size: 0.9rem;
+}
+.status-container {
+  display: flex;
+  justify-content: center;
+}
+.status {
+  padding: 0.2rem 0.4rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.384);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+}
+.status i {
+  color: rgb(176, 255, 111);
+  font-size: 0.2rem;
+  margin-top: 0.1rem;
+}
+.status p {
+  font-size: 0.5rem;
+  display: inline;
+}
+.weather-today {
+  margin-top: 1.7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+img {
+  width: 15rem;
+  margin: -2rem 0;
+}
+.weather-today span p {
+  display: inline;
+  color: rgb(201, 201, 201);
+  font-size: 2rem;
+  position: absolute;
+  margin: 1.1rem 0 0 -0.7rem;
+}
+.weather-today span strong {
+  font-size: 6.8rem;
+}
+.weather-today p {
+  margin-top: -0.8rem;
+  font-size: 1.4rem;
+}
+.weather-today time {
+  color: rgba(218, 218, 218, 0.575);
+  font-size: 0.6rem;
+}
+main .daily-specifications {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  border-top: 0.5px solid rgba(230, 230, 230, 0.089);
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+}
+.daily-specifications li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.daily-specifications li p {
+  font-size: 0.6rem;
+}
+.daily-specifications li i {
+  font-size: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.daily-specifications .fa-droplet {
+  color: #21c2f3;
+}
+.daily-specifications p:last-of-type {
+  color: rgba(240, 240, 240, 0.582);
+}
+nav {
+  padding: 1rem;
+}
+nav strong {
+  font-size: 0.9rem;
+}
+nav .week-navigate-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.week-navigate-container div * {
+  font-size: 0.6rem;
+  color: gray;
+}
+nav .daily-wheather {
+  display: flex;
+  justify-content: space-between;
+}
+.daily-wheather li {
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  transition: transform 0.3s ease;
+}
+.daily-wheather li p {
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+.daily-wheather li i {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+.daily-wheather li p:last-of-type {
+  color: gray;
+  font-size: 0.6rem;
+  margin-bottom: 0;
+}
+.daily-wheather li:hover {
+  background-color: #2273db;
+  box-shadow: 0 0 5px #46acff;
+  border: none;
+  transform: scale(1.2);
+}
+.daily-wheather li:hover p:last-of-type {
+  color: white;
+}
