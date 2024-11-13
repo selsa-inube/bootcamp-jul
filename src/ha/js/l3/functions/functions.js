@@ -3,47 +3,41 @@ function Minimum(val1, val2) {
     return val1;
   } else if (val2 < val1) {
     return val2;
-  } else {
-    return "bouth are equal";
   }
 }
 console.log(Minimum(2, 3));
 console.log(Minimum(0, 10));
 console.log(Minimum(0, -10));
 
-function isEven(val1) {
-  if (val1 == 0) {
+function isEven(value) {
+  if (value < 0) {
+    return isEven(-value);
+  }
+  if (value === 0) {
     return true;
-  } else if (val1 == 1) {
+  } else if (value === 1) {
     return false;
+  } else {
+    return isEven(value - 2);
   }
-  for (; val1 >= 0; val1 -= 2) {
-    if (val1 == 0) {
-      return true;
-    }
-  }
-  return false;
 }
-console.log(isEven(50));
+
+console.log(isEven(10));
 console.log(isEven(75));
 console.log(isEven(-1));
 
-let count = 0;
-function countBs(string) {
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] == "B") {
-      count++;
+function countChar(word, char) {
+  let charcount = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === char) {
+      charcount++;
     }
   }
-  return count;
+  return charcount;
 }
-function countChar(string, string2) {
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] == string2) {
-      count++;
-    }
-  }
-  return count;
-}
+
+const countBs = function (word) {
+  return countChar(word, "B");
+};
 console.log(countBs("BOB"));
 console.log(countChar("kakkerlak", "k"));
