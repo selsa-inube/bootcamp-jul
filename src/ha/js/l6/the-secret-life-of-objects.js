@@ -16,22 +16,27 @@ class Vec {
   get length() {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
+  dot(Vec2) {
+    const xMinus = this.x * Vec2.x;
+    const yMinus = this.y * Vec2.y;
+    return xMinus + yMinus;
+  }
 }
-console.log(new Vec(1, 2).plus(new Vec(2, 3)));
+/*console.log(new Vec(1, 2).plus(new Vec(2, 3)));
 console.log(new Vec(1, 2).minus(new Vec(2, 3)));
-console.log(new Vec(3, 4).length);
-
+console.log(new Vec(3, 4).length);*/
+console.log(Math.sqrt(new Vec(3, 4).dot(new Vec(3, 4))));
 class Group {
   constructor() {
     this.contained = [];
   }
   add(value) {
-    if (!this.contained.includes(value)) {
+    if (!this.has(value)) {
       this.contained.push(value);
     }
   }
   delete(value) {
-    if (this.contained.includes(value)) {
+    if (this.has(value)) {
       this.contained.shift(value);
     }
   }
@@ -59,13 +64,18 @@ class Group {
   }
 }
 let group = Group.from([10, 20]);
+//console.log(group);
+//console.log(group.has(10));
 console.log(group);
-console.log(group.has(10));
 group.add(10);
-group.delete(10);
 console.log(group);
+group.add(30);
+console.log(group);
+/*group.delete(10);
+
 console.log(group.has(10));
 console.log(group.has(30));
 for (let value of Group.from(["a", "b", "c"])) {
   console.log(value);
 }
+*/
