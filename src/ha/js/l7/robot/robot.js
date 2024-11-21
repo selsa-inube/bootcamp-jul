@@ -54,8 +54,9 @@ class VillageState {
 }
 
 function runRobot(state, robot, memory) {
-  console.log(state);
+  console.log(state.parcels);
   console.log(`start of ${robot.name} robot.`);
+  // console.log(map[state.place]);
   for (let turn = 0; ; turn++) {
     if (state.parcels.length == 0) {
       console.log(`Done in ${turn} turns`);
@@ -127,8 +128,10 @@ function findRoute(graph, from, to) {
     }
   }
 }
-// crear un findRout primero busque los paquetes pero evalue siempre si tiene un nodo cercano con algun paquete se mueva a ese para tomarlo
+
 function goalOrientedRobot({ place, parcels }, route) {
+  console.log(route);
+  console.log({ place, parcels });
   if (route === undefined || route.length == 0) {
     let parcel = parcels[0];
     if (parcel.place !== place) {
@@ -139,7 +142,6 @@ function goalOrientedRobot({ place, parcels }, route) {
   }
   return { direction: route[0], memory: route.slice(1) };
 }
-function myRobot() {}
 function compareRobots(robot1, memory1, robot2, memory2) {
   let totalTurnsRobot1 = 0;
   let totalTurnsRobot2 = 0;
@@ -157,7 +159,32 @@ function compareRobots(robot1, memory1, robot2, memory2) {
     `Robot 2 () promedio: ${totalTurnsRobot2 / NUM_SIMULATIONS} turnos`,
   );
 }
+function findPackageAtConnections(state = "Post Office", map = roadGraph, key) {
+  const connections = map[state];
+  return connections.includes(key.place);
+}
 
-//compareRobots(routeRobot, [], goalOrientedRobot, []);
-console.log(roadGraph);
-runRobot(VillageState.random(), goalOrientedRobot, []);
+function myRobot({ place, parcels }, route, map = roadGraph) {
+  for (const key of parcels) {
+    let packageAtConnection = findPackageAtConnections(place, map, key);
+    if (packageAtConnection) {
+      return { direction: key.place };
+    }
+  }
+
+  if (route === undefined || route.length == 0) {
+    let parcel = parcels[0];
+    if (parcel.place !== place) {
+      route = findRoute(roadGraph, place, parcel.place);
+    } else {
+      route = findRoute(roadGraph, place, parcel.address);
+    }
+  }
+  return { direction: route[0], memory: route.slice(1) };
+}
+
+compareRobots(myRobot, [], goalOrientedRobot, []);
+//console.log(roadGraph);
+
+//runRobot(VillageState.random(), goalOrientedRobot, []);
+//runRobot(VillageState.random(), myRobot, []);
