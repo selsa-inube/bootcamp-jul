@@ -16,12 +16,9 @@ class PGroup {
     if (!this.has(value)) return this;
     return new PGroup(this.values.filter((v) => v !== value));
   }
-
+  static #empty = new PGroup([]);
   static get empty() {
-    if (!PGroup._empty) {
-      PGroup._empty = new PGroup([]);
-    }
-    return PGroup._empty;
+    return this.#empty;
   }
 }
 

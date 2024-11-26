@@ -153,10 +153,10 @@ function compareRobots(robot1, memory1, robot2, memory2) {
     totalTurnsRobot2 += runRobot(state, robot2, memory2);
   }
   console.log(
-    `Robot 1 () promedio: ${totalTurnsRobot1 / NUM_SIMULATIONS} turnos`,
+    `${robot1} () promedio: ${totalTurnsRobot1 / NUM_SIMULATIONS} turnos`,
   );
   console.log(
-    `Robot 2 () promedio: ${totalTurnsRobot2 / NUM_SIMULATIONS} turnos`,
+    `${robot2} () promedio: ${totalTurnsRobot2 / NUM_SIMULATIONS} turnos`,
   );
 }
 function findPackageAtConnections(state = "Post Office", map = roadGraph, key) {
