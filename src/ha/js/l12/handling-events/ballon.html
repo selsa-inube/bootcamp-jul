@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #ballon {
+        font-size: 50px; /* Tamaño inicial */
+        display: inline-block;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="ballon">🎈</p>
+
+    <script>
+      let ballon = document.querySelector("#ballon");
+      document.addEventListener("keydown", (event) => {
+        let currentSize = parseInt(window.getComputedStyle(ballon).fontSize);
+        if (ballon.style.fontSize === "200px") {
+          return (ballon.textContent = "💥");
+        }
+        if (event.key === "ArrowUp") {
+          ballon.style.fontSize = currentSize + 10 + "px";
+        } else if (event.key === "ArrowDown") {
+          ballon.style.fontSize = currentSize - 10 + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
