@@ -5,39 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .trail {
-          position: absolute;
-          height: 5px;
-          width: 5px;
-          border-radius: 3px;
-          border: none;
-          box-shadow: 2px 2px 8px  10px  rgba(212, 120, 120, 0.765);
-        }
-      
-        body {
-          height: 200px;
-          background: beige;
-        }
-      </style>
-      
-      <body>
-        <script>
-          window.addEventListener("mousemove", (event) => {
-            
-            let trail = document.createElement("div");
-            trail.className = "trail"; 
-            trail.style.left = event.pageX - 4 + "px";  
-            trail.style.top = event.pageY - 4 + "px";   
-      
-            document.body.appendChild(trail);
-      
+      .trail {
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        border-radius: 3px;
+        box-shadow: 2px 2px 8px 10px rgba(212, 120, 120, 0.765);
+      }
+    </style>
 
-            setTimeout(() => {
-              trail.remove();  
-            }, 300); 
-          });
-        </script>
-      </body>
-      
-  </body>
+    <body>
+      <script>
+        window.addEventListener("mousemove", (event) => {
+          let trail = document.createElement("div");
+          trail.className = "trail";
+          trail.style.left = event.pageX + "px";
+          trail.style.top = event.pageY + "px";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 300);
+        });
+      </script>
+    </body>
+  </head>
 </html>
