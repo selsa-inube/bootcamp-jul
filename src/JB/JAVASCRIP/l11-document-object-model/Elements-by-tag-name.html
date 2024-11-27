@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elements by Tag Name</title>
+  </head>
+  <body>
+    <h1>Heading with a <span>span</span> element.</h1>
+    <p>A paragraph with <span>one</span>, <span>two</span> spans.</p>
+
+    <script>
+      function byTagName(node, tagName) {
+        const results = [];
+        tagName = tagName.toUpperCase();
+
+        function findElements(currentNode) {
+          if (currentNode.nodeType === Node.ELEMENT_NODE) {
+            if (currentNode.nodeName === tagName) {
+              results.push(currentNode);
+            }
+            for (const child of currentNode.children) {
+              findElements(child);
+            }
+          }
+        }
+
+        findElements(node);
+        return results;
+      }
+
+      console.log(byTagName(document.body, "h1").length);
+      console.log(byTagName(document.body, "span").length);
+      let para = document.querySelector("p");
+      console.log(byTagName(para, "span").length);
+    </script>
+  </body>
+</html>
