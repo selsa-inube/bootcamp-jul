@@ -11,7 +11,20 @@
 
     <script>
       function byTagName(node, tagName) {
-        // Your code here.
+        let result = [];
+
+        if (
+          node.nodeType === Node.ELEMENT_NODE &&
+          node.tagName.toLowerCase() === tagName
+        ) {
+          result.push(node);
+        }
+
+        for (let child of node.childNodes) {
+          result = result.concat(byTagName(child, tagName));
+        }
+
+        return result;
       }
 
       console.log(byTagName(document.body, "h1").length);
