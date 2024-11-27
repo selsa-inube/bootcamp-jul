@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: none;
+        margin: 15px;
+      }
+      .one {
+        background-color: rgb(246, 159, 159);
+      }
+      .two {
+        background-color: rgb(168, 220, 203);
+      }
+      .three {
+        background-color: rgb(192, 163, 219);
+      }
+    </style>
+  </head>
+  <body>
+    <tab-panel>
+      <div data-tabname="one" class="one">Tab one</div>
+      <div data-tabname="two" class="two">Tab two</div>
+      <div data-tabname="three" class="three">Tab three</div>
+    </tab-panel>
+    <script>
+      function asTabs(nodes) {
+        let node = nodes.children;
+        Array.from(node).forEach((element, index) => {
+          let button = document.createElement("button");
+          button.className = element.dataset.tabname;
+          button.textContent = element.dataset.tabname;
+          button.style.marginRight = "5px";
+          nodes.insertBefore(button, nodes.firstChild);
+
+          button.addEventListener("click", () => {
+            Array.from(node).forEach((type) => {
+              if (type.tagName === "DIV") {
+                type.style.display = "none";
+              }
+            });
+            element.style.display = "block";
+          });
+        });
+      }
+
+      asTabs(document.querySelector("tab-panel"));
+    </script>
+  </body>
+</html>
