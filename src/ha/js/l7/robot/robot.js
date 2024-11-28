@@ -56,7 +56,6 @@ class VillageState {
 function runRobot(state, robot, memory) {
   console.log(state.parcels);
   console.log(`start of ${robot.name} robot.`);
-  // console.log(map[state.place]);
   for (let turn = 0; ; turn++) {
     if (state.parcels.length == 0) {
       console.log(`Done in ${turn} turns`);
@@ -130,8 +129,6 @@ function findRoute(graph, from, to) {
 }
 
 function goalOrientedRobot({ place, parcels }, route) {
-  console.log(route);
-  console.log({ place, parcels });
   if (route === undefined || route.length == 0) {
     let parcel = parcels[0];
     if (parcel.place !== place) {
@@ -142,24 +139,22 @@ function goalOrientedRobot({ place, parcels }, route) {
   }
   return { direction: route[0], memory: route.slice(1) };
 }
-function compareRobots(robot1, memory1, robot2, memory2) {
+function compareRobots(robot1, robot2) {
   let totalTurnsRobot1 = 0;
   let totalTurnsRobot2 = 0;
   const NUM_SIMULATIONS = 100;
   for (let i = 0; i < NUM_SIMULATIONS; i++) {
-    let state = VillageState.random();
-    totalTurnsRobot1 += runRobot(state, robot1, memory1);
-    console.log(totalTurnsRobot1);
-    totalTurnsRobot2 += runRobot(state, robot2, memory2);
+    let state = VillageState.random(),
+      memory;
+    totalTurnsRobot1 += runRobot(state, robot1, memory);
+    totalTurnsRobot2 += runRobot(state, robot2, memory);
   }
-  console.log(
-    `${robot1} () promedio: ${totalTurnsRobot1 / NUM_SIMULATIONS} turnos`,
-  );
-  console.log(
-    `${robot2} () promedio: ${totalTurnsRobot2 / NUM_SIMULATIONS} turnos`,
-  );
+  let averageRobot1 = `${robot1.name} () promedio: ${totalTurnsRobot1 / NUM_SIMULATIONS} turnos`;
+  let averageRobot2 = `${robot2.name} () promedio: ${totalTurnsRobot2 / NUM_SIMULATIONS} turnos`;
+  return { averageRobot1, averageRobot2 };
 }
-function findPackageAtConnections(state = "Post Office", map = roadGraph, key) {
+
+function findPackageAtConnections(state, map, key) {
   const connections = map[state];
   return connections.includes(key.place);
 }
@@ -183,7 +178,7 @@ function myRobot({ place, parcels }, route, map = roadGraph) {
   return { direction: route[0], memory: route.slice(1) };
 }
 
-compareRobots(myRobot, [], goalOrientedRobot, []);
+console.log(compareRobots(myRobot, goalOrientedRobot));
 //console.log(roadGraph);
 
 //runRobot(VillageState.random(), goalOrientedRobot, []);
