@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="weather-app">
+      <section class="blue">
+        <header class="header">
+          <div class="icon-circle">
+            <i class="fa-solid fa-grip"></i>
+          </div>
+          <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Minsk</span>
+          </div>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </header>
+        <span class="update-status"> <span class="dot"></span> Updating </span>
+        <section class="weather-info">
+          <div class="weather-icon">
+            <i class="fa-solid fa-cloud"></i>
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="temperature">21<span>°</span></div>
+          <div class="description">Thunderstorm</div>
+          <div class="date">Monday, 17 May</div>
+        </section>
+        <div class="separator"></div>
+        <section class="details">
+          <div class="detail-item">
+            <i class="fas fa-wind"></i>
+            <span class="detail-text">
+              <span class="value">13 km/h</span>
+              <span class="label">Wind</span>
+            </span>
+          </div>
+          <div class="detail-item">
+            <i class="fas fa-tint"></i>
+            <span class="detail-text">
+              <span class="value">24%</span>
+              <span class="label">Humidity</span>
+            </span>
+          </div>
+          <div class="detail-item">
+            <i class="fa-solid fa-water"></i>
+            <span class="detail-text">
+              <span class="value">87%</span>
+              <span class="label">Chance of rain</span>
+            </span>
+          </div>
+        </section>
+      </section>
+      <section class="forecast-header">
+        <span>Today</span>
+        <a href="31.1.html" class="days">7 days ></a>
+      </section>
+      <section class="forecast">
+        <article class="forecast-item">
+          <div class="time">23°</div>
+          <i class="fas fa-cloud-sun"></i>
+          <div class="temp">10:00</div>
+        </article>
+        <article class="forecast-item active">
+          <div class="time">21°</div>
+          <i class="fa-solid fa-bolt"></i>
+          <div class="temp">11:00</div>
+        </article>
+        <article class="forecast-item">
+          <div class="time">22°</div>
+          <i class="fas fa-cloud-moon"></i>
+          <div class="temp">12:00</div>
+        </article>
+        <article class="forecast-item">
+          <div class="time">19°</div>
+          <i class="fas fa-calendar-week"></i>
+          <div class="temp">01:00</div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
