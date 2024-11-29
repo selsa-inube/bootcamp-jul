@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  height: 200vh;
+  background-color: rgb(221, 221, 221);
+}
+
+nav {
+  position: fixed;
+  height: 80vh;
+  display: grid;
+  grid-template: 1fr 1fr 1.3fr / 5.8rem 1fr;
+  column-gap: 1rem;
+  margin: 2rem 0 0 2rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+
+i {
+  font-size: 16px;
+  color: rgb(59, 59, 59);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+.nav-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+  width: 100%;
+}
+.mb-1 {
+  margin-bottom: 1.3rem;
+}
+.img-container {
+  margin: 1rem auto;
+  border: 1px solid gray;
+  border-radius: 8px;
+  width: 50%;
+  padding: 1px;
+}
+.img-nav {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+.mb-2 {
+  margin-bottom: 2.2rem;
+}
+.divider {
+  display: block;
+  width: 100%;
+  background-color: rgb(201, 201, 201);
+  height: 1px;
+  margin-top: 1.6rem;
+}
+.img-you {
+  margin: 1.2rem;
+}
+.color {
+  height: 16px;
+  width: 16px;
+}
+.blue {
+  background-color: rgb(197, 197, 255);
+  border: 1px solid rgb(143, 143, 192);
+  border-radius: 5px;
+}
+.pink {
+  background-color: rgb(255, 220, 225);
+  border: 1px solid rgb(190, 156, 162);
+  border-radius: 5px;
+}
+.green {
+  background-color: rgb(212, 255, 212);
+  border: 1px solid rgb(149, 189, 149);
+  border-radius: 5px;
+}
+.more {
+  border: 1px solid rgb(184, 184, 184);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#new-layout {
+  font-size: 10px;
+  padding: auto;
+  color: rgb(119, 119, 119);
+}
+.logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template: repeat(4, 50px) / 30% 70%;
+  background-color: white;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+  width: 28rem;
+  height: 19.6rem;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.7s,
+    visibility 0.6s ease-in-out;
+}
+.list-logos {
+  grid-column: 1 / 2;
+  grid-row: 1 / 5;
+}
+.li-logos {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+aside .list-logos img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+}
+.b-gray {
+  border: 1px solid gray;
+}
+.logo span h4 {
+  padding: 6px 0 4px 0;
+  font-size: 1.6rem;
+}
+.logo span p {
+  color: gray;
+}
+.profile {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  background-color: white;
+  width: 70%;
+  border-radius: 10px;
+  padding: 8px;
+  display: grid;
+  grid-template-rows: 1fr repeat(5, 1fr) 1.2fr;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.7s,
+    visibility 0.6s ease-in-out;
+}
+.profile-info {
+  grid-row: 1 / 2;
+  border-bottom: 1px solid rgb(201, 201, 201);
+  display: flex;
+  align-items: flex-start;
+}
+.profile img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+.profile ul {
+  grid-row: 2 / 7;
+}
+
+.profile h4 {
+  font-size: 1.5rem;
+}
+.profile p {
+  color: gray;
+  font-size: 1.2rem;
+}
+.profile ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.profile li {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+.profile li i {
+  margin-right: 1rem;
+}
+.profile li h5 {
+  font-size: 1.2rem;
+}
+
+.li-dot {
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(212, 255, 212);
+  border-radius: 5px;
+}
+.icon-dot {
+  padding-left: 0.3rem;
+  font-size: 0.8rem;
+  color: green;
+}
+.text-dot {
+  color: green;
+}
+.fa-star {
+  color: orange;
+}
+.terms-nav {
+  grid-row: 7 / 8;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+.hover-logo {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1.1rem;
+}
+.hover-logo:hover + .logo {
+  opacity: 1;
+  visibility: visible;
+}
+.logo:hover {
+  opacity: 1;
+  visibility: visible;
+}
+.hover-profile {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  bottom: 0;
+  margin: 1.1rem;
+}
+.hover-profile:hover + .profile {
+  opacity: 1;
+  visibility: visible;
+}
+.profile:hover {
+  opacity: 1;
+  visibility: visible;
+}
