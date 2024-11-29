@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: grid;
+  grid: 7rem 1fr 15rem / 5rem 1fr;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+}
+nav {
+  grid-area: 1 / 1 / 6 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 0 1.5rem 0;
+  background-color: white;
+}
+nav i {
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+header {
+  grid-area: 1 / 2 / 2 / 6;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem 0 4rem;
+  align-items: center;
+}
+header ul {
+  display: flex;
+  gap: 2rem;
+}
+header ul li {
+  font-size: 1.4rem;
+}
+header h1 {
+  font-size: 2.5rem;
+}
+.header-buttons li {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-container {
+  height: 4rem;
+  border: 2px solid rgb(175, 175, 175);
+  justify-content: center;
+  padding: 1rem 1.5rem;
+}
+main {
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  padding: 0 4rem 0 4rem;
+  grid: 5rem 5rem 1fr / 1fr 1fr 0.6fr;
+}
+.main-topics {
+  border-top: 1px solid rgb(223, 223, 223);
+  grid-area: 1 / 1 / 2 / 4;
+}
+main ul {
+  display: flex;
+  justify-content: space-between;
+}
+main ul li {
+  padding-top: 2rem;
+}
+.topics-date {
+  padding-top: 0.5rem;
+}
+main ul li strong {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: black;
+}
+main ul li * {
+  font-size: 1.1rem;
+  color: rgb(49, 49, 49);
+}
+.more-topics {
+  background-color: black;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  justify-content: center;
+}
+.more-topics i {
+  color: white;
+}
+.select-topics {
+  grid-area: 2 / 1 / 3 / 2;
+  padding-right: 7vw;
+}
+.select-topic-title {
+  padding-top: 1.4rem;
+}
+main ul h2 {
+  font-size: 1.9rem;
+  color: black;
+}
+.select-topic {
+  border-bottom: 2px solid rgb(83, 83, 83);
+}
+.main-new {
+  grid-area: 3 / 1 / 4 / 2;
+  padding: 0 3rem 0 0;
+  border-right: 1px solid rgb(223, 223, 223);
+}
+div img {
+  max-width: 24rem;
+}
+.main-new h3 {
+  font-size: 3rem;
+  margin: 3vh 0;
+}
+.main-new p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: rgb(46, 46, 46);
+}
+
+.topic-time-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.topic-time-container p {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.more-info {
+  display: inline-block;
+  margin-top: 1.7rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(119, 119, 119);
+  color: rgb(119, 119, 119);
+}
+.lates-news {
+  grid-area: 3 /2 / 4 / 3;
+  border-right: 1px solid rgb(223, 223, 223);
+  padding: 0 3rem;
+}
+.lates-news strong {
+  font-size: 1.3rem;
+}
+
+.lates-news article h3 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.lates-news ul {
+  margin-top: 2.5rem;
+  width: 7rem;
+}
+.lates-news i {
+  font-size: 1.2rem;
+}
+.lates-news .fa-circle {
+  color: gray;
+}
+.fast-forward {
+  grid-area: 3 / 3 / 4 / 4;
+  padding: 0 0 0 3rem;
+}
+.fast-forward strong {
+  font-size: 1.3rem;
+}
+.fast-forward ul {
+  display: flex;
+  flex-direction: column;
+}
+.fast-forward ul article {
+  display: grid;
+  grid: 1fr 1fr/ 1fr 10rem;
+  column-gap: 1.5rem;
+  justify-items: end;
+}
+.fast-forward article h4 {
+  font-size: 1.4rem;
+  margin-bottom: 1re;
+}
+.fast-forward article p {
+  display: block;
+  width: 100%;
+  grid-area: 2 / 1 / 2 / 2;
+  color: rgb(90, 90, 90);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+.fast-forward article img {
+  max-width: 100%;
+  height: 75%;
+  grid-area: 1 / 2 / 3 /3;
+}
+footer {
+  margin: 2rem 4rem 0 4rem;
+  border-top: 1px solid rgb(119, 119, 119);
+  grid-area: 3 / 2 / 3 /3;
+  display: grid;
+  grid: 5rem 1fr/ 1fr;
+}
+footer .footer-topics {
+  grid-area: 1 / 1 /2 / 3;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-topics ul {
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  padding-top: 1rem;
+  align-items: center;
+}
+.footer-topics ul h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: black;
+}
+.footer-topics ul li {
+  color: rgb(56, 56, 56);
+}
+.footer-topics span {
+  display: block;
+  margin: auto 0;
+}
+.footer-topics span a {
+  margin-right: 0.8rem;
+}
+.footer-topics span * {
+  color: rgb(56, 56, 56);
+}
