@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="code">return "hi";</textarea>
+    <button id="button">Run</button>
+    <pre id="output"></pre>
+
+    <script>
+      const textarea = document.getElementById("code");
+      const button = document.getElementById("button");
+      const pre = document.getElementById("output");
+      function executeText(text) {
+        const func = new Function(text);
+        const result = func();
+        pre.textContent = result;
+      }
+      button.addEventListener("click", () => {
+        const text = textarea.value;
+        try {
+          executeText(text);
+        } catch (e) {
+          console.log("the error is:" + e);
+        }
+      });
+    </script>
+  </body>
+</html>
