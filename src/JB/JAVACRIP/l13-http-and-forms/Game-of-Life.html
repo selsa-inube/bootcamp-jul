@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Life</title>
+
+    <style type="text/css">
+      .cell {
+        border-radius: 50%;
+        height: 20px;
+        margin: 0px;
+        width: 20px;
+      }
+
+      .alive {
+        background-color: #f5b623;
+        height: 18px;
+        margin: 1px;
+        width: 18px;
+      }
+
+      .dead {
+        background-color: darkgray;
+        height: 6px;
+        margin: 7px;
+        width: 6px;
+      }
+
+      .alive,
+      .dead {
+        transition:
+          width 1s,
+          height 1s,
+          margin 1s,
+          background-color 1s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <label for="rows">Rows:</label>
+    <input id="rows" type="number" name="rows" value="20" />
+    <label for="columns">Columns:</label>
+    <input id="columns" type="number" name="columns" value="60" />
+    <button id="life">Create life</button>
+    <button id="next">Next generation</button>
+    <button id="auto">Switch autopilot on</button>
+    <div id="grid"></div>
+    <script>
+      class Life {
+        constructor(width = 50, height = 50, density = 5) {
+          this.initialiseLife(width, height, density);
+        }
+        initialiseLife(width = 50, height = 50, density = 5) {
+          this.rows = [];
+          this.height = height;
+          this.width = width;
+          for (let row = 0; row < width; row++) {
+            let columns = [];
+            for (let col = 0; col < height; col++) {
+              columns[col] = !!Math.floor(Math.random() + 0.1 * density);
+            }
+            this.rows[row] = columns;
+          }
+        }
+        nextGeneration() {
+          let nextGen = [];
+          for (let row = 0; row < this.width; row++) {
+            let columns = [];
+            for (let col = 0; col < this.height; col++) {
+              let value = this.rows[row][col];
+              columns[col] = value;
+              let neighbours = this.numberOfNeighbours(row, col);
+              if (value) {
+                if (neighbours < 2 || neighbours > 3) {
+                  columns[col] = 0;
+                }
+              } else {
+                if (neighbours === 3) {
+                  columns[col] = 1;
+                }
+              }
+            }
+            nextGen[row] = columns;
+          }
+          this.rows = nextGen;
+        }
+        numberOfNeighbours(row, col) {
+          let count = 0;
+          for (let x = row - 1; x <= row + 1; x++) {
+            for (let y = col - 1; y <= col + 1; y++) {
+              if (x >= 0 && x < this.width && y >= 0 && y < this.height) {
+                count += this.rows[x][y] ? 1 : 0;
+              }
+            }
+          }
+          count -= this.rows[row][col] ? 1 : 0;
+          return count;
+        }
+        toggleLife(row, col) {
+          this.rows[row][col] = !this.rows[row][col];
+        }
+      }
+      Life.prototype[Symbol.iterator] = function* () {
+        for (let row = 0; row < this.width; row++) {
+          let columns = [];
+          for (let col = 0; col < this.height; col++) {
+            yield {
+              row,
+              col,
+              value: this.rows[row][col],
+              numberOfNeighbours: this.numberOfNeighbours.bind(this, row, col),
+            };
+          }
+        }
+      };
+      let gridElement = document.getElementById("grid");
+      let nextGenButton = document.getElementById("next");
+      let autoPilotButton = document.getElementById("auto");
+      let createLifeButton = document.getElementById("life");
+      let autoPilot = false;
+      let autoPilotID = 0;
+      let life;
+
+      const renderLife = (resetGrid = false) => {
+        if (resetGrid) {
+          let currentRow = -1;
+          let divCell;
+          let table = document.createElement("table");
+          let tableRow;
+          let tableCell;
+          if (gridElement.firstChild) {
+            gridElement.removeChild(gridElement.firstChild);
+          }
+          for (let cell of life) {
+            if (currentRow !== cell.row) {
+              tableRow = document.createElement("tr");
+              table.appendChild(tableRow);
+              currentRow = cell.row;
+            }
+            tableCell = document.createElement("td");
+            tableCell.dataset.row = cell.row;
+            tableCell.dataset.col = cell.col;
+            tableCell.addEventListener("click", (e) => {
+              let target;
+              let data;
+              if (e.target.tagName == "DIV") {
+                target = e.target;
+                data = e.target.parentNode;
+              } else {
+                target = e.target.firstChild;
+                data = e.target;
+              }
+              life.toggleLife(cell.row, cell.col);
+              if (life.rows[data.dataset.row][data.dataset.col]) {
+                target.className = "cell alive";
+              } else {
+                target.className = "cell dead";
+              }
+            });
+            divCell = document.createElement("div");
+            divCell.className = "cell";
+            tableCell.appendChild(divCell);
+            tableRow.appendChild(tableCell);
+          }
+          gridElement.appendChild(table);
+        }
+        for (let cell of life) {
+          let divCell = document.querySelector(
+            `td[data-row='${cell.row}'][data-col='${cell.col}']`,
+          );
+          let targetClass = cell.value ? "cell alive" : "cell dead";
+          if (divCell.firstChild.className !== targetClass) {
+            divCell.firstChild.className = targetClass;
+          }
+        }
+        if (autoPilot && autoPilotID === 0) {
+          autoPilotID = setInterval(() => {
+            life.nextGeneration();
+            renderLife();
+          }, 1000);
+        } else if (!autoPilot && autoPilotID !== 0) {
+          clearInterval(autoPilotID);
+          autoPilotID = 0;
+        }
+      };
+
+      const initialiseLife = (width, height, density = 5) => {
+        life = new Life(width, height, density);
+        renderLife(true);
+      };
+
+      const createLife = () => {
+        let width =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth;
+        let height =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight;
+        let columns = Math.floor(width / 25);
+        let rows = Math.floor(height / 25);
+        document.getElementById("columns").value = columns;
+        document.getElementById("rows").value = rows;
+        initialiseLife(rows, columns, 3);
+      };
+
+      autoPilotButton.addEventListener("click", () => {
+        autoPilot = !autoPilot;
+        autoPilotButton.textContent = `Switch autopilot ${
+          autoPilot ? "off" : "on"
+        }`;
+        life.nextGeneration();
+        renderLife();
+      });
+
+      createLifeButton.addEventListener("click", () => {
+        createLife();
+      });
+
+      nextGenButton.addEventListener("click", () => {
+        life.nextGeneration();
+        renderLife();
+      });
+
+      createLife();
+    </script>
+  </body>
+</html>

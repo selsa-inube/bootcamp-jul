@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Execute Code</title>
+  </head>
+  <body>
+    <textarea id="code">return "hi";</textarea>
+    <button id="button">Run</button>
+    <pre id="output"></pre>
+
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        const code = document.getElementById("code").value;
+        const output = document.getElementById("output");
+        try {
+          const func = new Function(code);
+          const result = func();
+          output.textContent = String(result);
+        } catch (err) {
+          output.textContent = `Error: ${err}`;
+        }
+      });
+    </script>
+  </body>
+</html>
