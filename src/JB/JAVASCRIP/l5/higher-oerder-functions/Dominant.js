@@ -1,12 +1,15 @@
 const SCRIPTS = [
   {
     name: "Latin",
-    ranges: [[65, 91], [97, 123]], 
+    ranges: [
+      [65, 91],
+      [97, 123],
+    ],
     direction: "ltr",
   },
   {
     name: "Arabic",
-    ranges: [[1536, 1792]], 
+    ranges: [[1536, 1792]],
     direction: "rtl",
   },
 ];
@@ -22,7 +25,7 @@ function countBy(items, groupName) {
   let counts = [];
   for (let item of items) {
     let name = groupName(item);
-    let known = counts.find(c => c.name === name);
+    let known = counts.find((c) => c.name === name);
     if (known) {
       known.count++;
     } else {
@@ -32,7 +35,7 @@ function countBy(items, groupName) {
   return counts;
 }
 function dominantDirection(text) {
-  let directions = countBy(text, char => {
+  let directions = countBy(text, (char) => {
     let script = characterScript(char.codePointAt(0));
     return script ? script.direction : "none";
   }).filter(({ name }) => name !== "none");
@@ -43,4 +46,4 @@ function dominantDirection(text) {
 }
 
 console.log(dominantDirection("Hello!"));
-console.log(dominantDirection("Hey, مساء الخير")); 
+console.log(dominantDirection("Hey, مساء الخير"));
