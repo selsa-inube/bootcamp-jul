@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balloon</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      p {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="balloon">🎈</p>
+
+    <script>
+      const balloon = document.getElementById("balloon");
+      let size = 20;
+      const maxSize = 100;
+
+      function updateSize(newSize) {
+        size = newSize;
+        balloon.style.fontSize = `${size}px`;
+      }
+
+      function handleKeydown(event) {
+        if (event.key === "ArrowUp") {
+          const newSize = size * 1.1;
+          if (newSize > maxSize) {
+            balloon.textContent = "💥";
+            document.removeEventListener("keydown", handleKeydown);
+          } else {
+            updateSize(newSize);
+          }
+        } else if (event.key === "ArrowDown") {
+          const newSize = size * 0.9;
+          if (newSize >= 10) {
+            updateSize(newSize);
+          }
+        }
+        event.preventDefault();
+      }
+      updateSize(size);
+      document.addEventListener("keydown", handleKeydown);
+    </script>
+  </body>
+</html>
