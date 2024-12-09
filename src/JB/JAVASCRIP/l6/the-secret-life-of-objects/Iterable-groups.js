@@ -8,7 +8,7 @@ class Group {
     }
   }
   delete(value) {
-    this.members = this.members.filter(member => member !== value);
+    this.members = this.members.filter((member) => member !== value);
   }
   has(value) {
     return this.members.includes(value);
