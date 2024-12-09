@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <style>
+      tab-panel {
+        display: block;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      .tabs {
+        display: flex;
+        margin-bottom: 10px;
+      }
+      .tabs button {
+        padding: 5px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        background: #f0f0f0;
+      }
+      .tabs button.active {
+        background: #007bff;
+        color: white;
+        border-color: #007bff;
+      }
+      .tab-content {
+        display: none;
+        font-size: 20px;
+      }
+      .tab-content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <tab-panel>
+      <div data-tabname="one">Tab one content</div>
+      <div data-tabname="two">Tab two content</div>
+      <div data-tabname="three">Tab three content</div>
+    </tab-panel>
+
+    <script>
+      function asTabs(node) {
+        const tabs = Array.from(node.children);
+
+        const tabButtons = document.createElement("div");
+        tabButtons.className = "tabs";
+        node.insertBefore(tabButtons, node.firstChild);
+        tabs.forEach((tab, index) => {
+          const button = document.createElement("button");
+          button.textContent = tab.getAttribute("data-tabname");
+          tabButtons.appendChild(button);
+
+          if (index === 0) {
+            button.classList.add("active");
+            tab.classList.add("active", "tab-content");
+          } else {
+            tab.classList.add("tab-content");
+          }
+
+          button.addEventListener("click", () => {
+            document.querySelectorAll(".tab-content").forEach((content) => {
+              content.classList.remove("active");
+            });
+            document.querySelectorAll(".tabs button").forEach((btn) => {
+              btn.classList.remove("active");
+            });
+            tab.classList.add("active");
+            button.classList.add("active");
+          });
+        });
+      }
+      asTabs(document.querySelector("tab-panel"));
+    </script>
+  </body>
+</html>
