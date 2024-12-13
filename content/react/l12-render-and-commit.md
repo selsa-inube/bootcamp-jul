@@ -2,4 +2,4 @@
 
 Read this guide of React Docs: https://react.dev/learn/render-and-commit
 
-Quiz: https://forms.office.com/r/Jx3pnc7R0u
+Quiz: https://forms.office.com/r/npe6mqfgpN
